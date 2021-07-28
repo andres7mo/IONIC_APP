@@ -1,17 +1,40 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>
-      Tab 3
-    </ion-title>
+    <ion-title style="text-align: center;">VELOCIMETRO</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content >
 
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+  <ion-row>
+    <ion-col></ion-col>
+    <ion-col style="background-color: aquamarine; border: black solid 2px; ">
+      <ion-label>Velocidad en X: {{x}}</ion-label>
+    </ion-col>
+    <ion-col></ion-col>
+  </ion-row>
+  <br>
+  <ion-row>
+    <ion-col></ion-col>
+    <ion-col style="background-color: aquamarine;border: black solid 2px;">
+      <ion-label>Velocidad en y: {{y}}</ion-label>
+    </ion-col>
+    <ion-col></ion-col>
+  </ion-row>
+  <br>
+  <ion-row>
+    <ion-col></ion-col>
+    <ion-col style="background-color: aquamarine;border: black solid 2px;">
+      <ion-label >Velocidad en Z: {{z}}</ion-label>
+    </ion-col>
+    <ion-col></ion-col>
+  </ion-row>
+  <br>
+  <ion-row>
+    <ion-col></ion-col>
+    <ion-col style="text-align: center;">
+      <ion-button color="primary" (click)="datosvelocidad()" >Velocidad</ion-button>
+    </ion-col>
+    <ion-col></ion-col>
+  </ion-row>
 </ion-content>
