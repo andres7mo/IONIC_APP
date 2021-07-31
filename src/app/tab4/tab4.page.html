@@ -1,0 +1,72 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title style="text-align: center; font-family: Verdana, Geneva, Tahoma, sans-serif;">STORAGE</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-------------------------------------------DATO1----------------------------------------------------------------------->
+  <ion-row>
+    <ion-col></ion-col>
+    <ion-col style="background-color: aquamarine; border: black solid 2px; ">
+      <ion-input [(ngModel)]="Usuario.nombre">Nombre: </ion-input>
+    </ion-col>
+    <ion-col></ion-col>
+  </ion-row>
+  <br>
+  <!-------------------------------------------DATO2----------------------------------------------------------------------->
+  <ion-row>
+    <ion-col></ion-col>
+    <ion-col style="background-color: aquamarine; border: black solid 2px; ">
+      <ion-input [(ngModel)]="Usuario.apellido">Apellido: </ion-input>
+    </ion-col>
+    <ion-col></ion-col>
+  </ion-row>
+  <br>
+  <!-------------------------------------------DATO3----------------------------------------------------------------------->
+  <ion-row>
+    <ion-col></ion-col>
+    <ion-col style="background-color: aquamarine; border: black solid 2px; ">
+      <ion-input [(ngModel)]="Usuario.telefono">Telefono: </ion-input>
+    </ion-col>
+    <ion-col></ion-col>
+  </ion-row>
+  <br>
+  <!-------------------------------------------DATO4----------------------------------------------------------------------->
+  <ion-row>
+    <ion-col></ion-col>
+    <ion-col style="background-color: aquamarine; border: black solid 2px; ">
+      <ion-input Usuario.correo>Correo: </ion-input>
+    </ion-col>
+    <ion-col></ion-col>
+  </ion-row>
+  <br>
+  <!-------------------------------------------DATO5----------------------------------------------------------------------->
+  <ion-row>
+    <ion-col></ion-col>
+    <ion-col style="text-align: center;">
+      <ion-button color="primary" (click)="guardardato()">GUARDAR</ion-button>
+    </ion-col>
+    <ion-col></ion-col>
+  </ion-row>
+  <br>
+  <!-------------------------------------------LISTA----------------------------------------------------------------------->
+  <ion-list>
+    <ion-list-header>
+      Productos
+    </ion-list-header>
+    <ion-item *ngFor="let Us of mostrarusuario">
+      <ion-avatar slot="start">
+        <img src="https://i.ibb.co/zNtJjn4/133482.jpg">
+      </ion-avatar>
+      <ion-label>
+        <h3>Nombre: {{Us.nombre}}</h3>
+        <h3>Descripcion: {{Us.apellido}}</h3>
+        <h3>Precio: {{Us.telefono}}</h3>
+        <h3>Stock: {{Us.correo}}</h3>
+      </ion-label>
+    </ion-item>
+
+  </ion-list>
+
+</ion-content>
