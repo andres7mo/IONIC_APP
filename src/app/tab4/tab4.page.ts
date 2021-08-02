@@ -20,7 +20,6 @@ export class Tab4Page implements OnInit {
   }
   async guardardato(){
     const {value}: any= await Storage.get({key: 'usuarios'});
-    console.log(value.value);
     const listausuario= JSON.parse(value);
     listausuario.push(this.Usuario);
     Storage.set({key: 'usuarios', value: JSON.stringify(listausuario)});
@@ -29,7 +28,6 @@ export class Tab4Page implements OnInit {
 
   async recuperar(){
     const {value}: any= await Storage.get({key: 'usuarios'});
-    console.log(value.value);
      this.mostrarusuario= JSON.parse(value);
   }
 }
